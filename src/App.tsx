@@ -168,7 +168,7 @@ function App() {
 
           <div className='w-full' />
           {/* Right Side */}
-          <BiSolidBellRing size="4dvh" className={`${unreadNotifications ? '!text-t_Highlight animate-pulse' : '!text-t_Dark animate-none'}`} onClick={()=>setUnreadNotifications(!unreadNotifications)} />
+          <BiSolidBellRing size="2em" className={`${unreadNotifications ? '!text-t_Highlight animate-pulse' : '!text-t_Dark animate-none'}`} onClick={()=>setUnreadNotifications(!unreadNotifications)} />
           <button type="button" className='flex flex-row space-x-[0.5dvw] hover:bg-t_MediumBg p-2 rounded-lg'>
             <p className='text-t_Dark cursor-pointer select-none whitespace-nowrap'>💼 Your Company</p>
             <FaChevronDown className='!text-t_Dark' />
@@ -212,35 +212,35 @@ function App() {
                 <FloorPlanViewer className='h-[40dvh] w-[40dvw]' imgData={floorPlanImage} setImgData={setFloorPlanImage} />
               </div>
               <div className='flex flex-col w-full py-[4dvh] px-[2dvw]'>
-                <label className='select-none my-2 text-md text-t_Dark'>Floor Name</label>
-                <input type="text" id="name" className="border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-2 focus:border-t_Highlight focus:outline-none focus:ring-0" defaultValue={nameVal} required />
-                <label className='select-none my-2 text-md text-t_Dark'>Interior Size</label>
-                <input type="text" id="intSize" className="border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-2 focus:border-t_Highlight focus:outline-none focus:ring-0" defaultValue={intSizeVal} required />
-                <label className='select-none my-2 text-md text-t_Dark'>Exterior Size</label>
-                <input type="text" id="extSize" className="border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-2 focus:border-t_Highlight focus:outline-none focus:ring-0" defaultValue={extSizeVal} required />
-                <label className='select-none my-2 text-md text-t_Dark'>Exterior Type (Variable)</label>
-                <select id="extType" className="cursor-pointer border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-2 focus:border-t_Highlight focus:outline-none focus:ring-0" required>
+                <label className='select-none my-[0.75dvh] text-md text-t_Dark'>Floor Name</label>
+                <input type="text" id="name" className="border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-[0.75dvh] focus:border-t_Highlight focus:outline-none focus:ring-0" defaultValue={nameVal} required />
+                <label className='select-none my-[0.75dvh] text-md text-t_Dark'>Interior Size</label>
+                <input type="text" id="intSize" className="border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-[0.75dvh] focus:border-t_Highlight focus:outline-none focus:ring-0" defaultValue={intSizeVal} required />
+                <label className='select-none my-[0.75dvh] text-md text-t_Dark'>Exterior Size</label>
+                <input type="text" id="extSize" className="border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-[0.75dvh] focus:border-t_Highlight focus:outline-none focus:ring-0" defaultValue={extSizeVal} required />
+                <label className='select-none my-[0.75dvh] text-md text-t_Dark'>Exterior Type (Variable)</label>
+                <select id="extType" className="cursor-pointer border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-[0.75dvh] focus:border-t_Highlight focus:outline-none focus:ring-0" required>
                   <option value="" selected disabled hidden>Select</option>
                   {(Object.keys(ExteriorType).filter(key => isNaN(Number(key)))).map((key, i) => {
                     return <option key={i} value={key}>{key}</option>;
                   })}
                 </select>
-                <label className='select-none my-2 text-md text-t_Dark'>Facing Direction (Variable)</label>
-                <select id="facingDir" className="cursor-pointer border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-2 focus:border-t_Highlight focus:outline-none focus:ring-0" required>
+                <label className='select-none my-[0.75dvh] text-md text-t_Dark'>Facing Direction (Variable)</label>
+                <select id="facingDir" className="cursor-pointer border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-[0.75dvh] focus:border-t_Highlight focus:outline-none focus:ring-0" required>
                   <option value="" selected disabled hidden>Select</option>
                   {(Object.keys(CardinalDirection).filter(key => isNaN(Number(key)))).map((key, i) => {
                     return <option key={i} value={key}>{key}</option>;
                   })}
                 </select>
-                <label className='select-none my-2 text-md text-t_Dark'>Select Floor Type</label>
-                <select id="floorType" className="cursor-pointer border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-2 focus:border-t_Highlight focus:outline-none focus:ring-0" required>
+                <label className='select-none my-[0.75dvh] text-md text-t_Dark'>Select Floor Type</label>
+                <select id="floorType" className="cursor-pointer border border-t_Medium text-t_Dark text-sm rounded-lg w-full p-[0.75dvh] focus:border-t_Highlight focus:outline-none focus:ring-0" required>
                   <option value="" selected disabled hidden>Select</option>
                   {(Object.keys(FloorType).filter(key => isNaN(Number(key)))).map((key, i) => {
                     return <option key={i} value={key}>{key.replaceAll("_", " ")}</option>;
                   })}
                 </select>
                 <div className='p-2' />
-                <button type="submit" className='text-t_Light bg-t_Highlight hover:bg-t_DarkHighlight focus:ring-0 focus:outline-none focus:ring-t_Highlight font-bold rounded-lg text-sm p-2 text-center'>Save</button>
+                <button type="submit" className='text-t_Light bg-t_Highlight hover:bg-t_DarkHighlight focus:ring-0 focus:outline-none focus:ring-t_Highlight font-bold rounded-lg text-sm p-[0.75dvh] text-center'>Save</button>
               </div>
             </form>
           </div>

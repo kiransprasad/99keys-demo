@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <IconContext.Provider value={{ size: "2.5dvh", className: "text-t_Light cursor-pointer"}}>
+    <IconContext.Provider value={{ size: "1.5em", className: "text-t_Light cursor-pointer"}}>
       <App />
     </IconContext.Provider>
   </React.StrictMode>
